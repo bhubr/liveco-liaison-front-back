@@ -6,7 +6,7 @@ function MovieList({ movies }) {
   return (
     <section className="MovieList">
       {movies.map((movie) => (
-        <MovieCard title={movie.title} picture={movie.picture} />
+        <MovieCard key={movie.id} title={movie.title} picture={movie.picture} />
       ))}
     </section>
   );
