@@ -6,9 +6,7 @@ function MovieListContainer() {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    axios
-      .get('http://localhost:4000/api/movies')
-      .then((res) => setMovies(res.data));
+    axios.get(`/api/movies`).then((res) => setMovies(res.data));
     // return () => {
     //   cleanup
     // }
